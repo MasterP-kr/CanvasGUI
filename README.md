@@ -41,6 +41,13 @@ function loop() {
 loop();
 ```
 
+## Profiles
+To save and load profiles.
+
+Must call remember after gui initialization
+```javascript
+myGui.remember(MyMenu)
+```
 
 ## Folders
 
