@@ -33,9 +33,9 @@ configFolder.add("Speed", MyMenu, "speed", "Slider", {
     step: 1000
 })
 configFolder.add("Gravity", MyMenu, "gravity", "Input")
-
+const clearRect = true;
 function loop() {
-    myGui.draw(ctx)
+    myGui.draw(ctx,clearRect)
     requestAnimationFrame(loop);
 }
 loop();
