@@ -15,7 +15,7 @@ Basic usage to get started
 **Must Include Styles**
 
 ```javascript
-const styles={fontFamily:"Roboto",gui:{x:0,y:0,width:250},itemHeight:28,profiles:{background:"#090F22",borderBottom:"#4c698d"},folder:{header:{color:"#4c698d",fontSize:"15.4px",background:"#0B132B"}},item:{color:"#839cbc",fontSize:"13.2px",background:"#1C2541"},button:{background:"#1C2541",lineTop:"#5BC0BE",color:"#4c698d"},checkbox:{background:"#242f53",checkedBg:"#5BC0BE",hovered:"rgba(91,192,190,0.3)"},input:{background:"#242f53",color:"#4c698d",cursor:"#839cbc"},select:{background:"#242f53",color:"#4c698d",hovered:"#3A506B"},option:{background:"#242f53",color:"#4c698d",hovered:"#3A506B",hoveredColor:"white",outline:"#0B132B"},slider:{background:"#242f53",color:"#5BC0BE",slider:"#5BC0BE",hovered:"#3A506B"}};```
+const styles = { fontFamily: "Roboto", gui: { x: 0, y: 0, width: 250 }, itemHeight: 28, setup:{ background: "#0B132B", color: "#4c698d", fontSize: "16px", header: { color: "#839cbc", fontSize: "20px", borderBottom: "#3A506B", paddingBottom: 20 }, steps: { background:"white", selected:"#5BC0BE", } }, profiles: { background: "#090F22", borderBottom: "#4c698d" }, folder: { header: { color: "#4c698d", fontSize: "15.4px", background: "#0B132B" } }, item: { color: "#839cbc", fontSize: "13.2px", background: "#1C2541" }, button: { background: "#1C2541", lineTop: "#5BC0BE", color: "#4c698d" }, checkbox: { background: "#242f53", checkedBg: "#5BC0BE", hovered: "rgba(91,192,190,0.3)" }, input: { background: "#242f53", color: "#4c698d", cursor: "#839cbc" }, select: { background: "#242f53", color: "#4c698d", hovered: "#3A506B" }, option: { background: "#242f53", color: "#4c698d", hovered: "#3A506B", hoveredColor: "white", outline: "#0B132B" }, slider: { background: "#242f53", color: "#5BC0BE", slider: "#5BC0BE", hovered: "#3A506B" } }```
 ```
 
 ***If you don't know what to pass as `ctx` you can set it to undefined then inside `draw` you can pass a canvas reference.***
@@ -25,7 +25,9 @@ const styles={fontFamily:"Roboto",gui:{x:0,y:0,width:250},itemHeight:28,profiles
     gravity: 0.5,
     speed: 1000,
 }
-const myGui = new MyGUI(ctx, 0, 0, 250, 250, styles)
+const name = "GUI"
+const version = "1"
+const myGui = new MyGUI(ctx, 0, 0, 250, 250, styles, name, version)
 const configFolder = myGui.addFolder("Config", true)
 configFolder.add("Speed", MyMenu, "speed", "Slider", {
     min: 1000,
